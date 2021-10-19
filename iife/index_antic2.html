@@ -6,14 +6,27 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src="user.js"></script>
 </head>
 <body>
 
     <script>
+        // IIFE
+        var albert =(function user () {
+            let email = 'abrusca@iesebre.com';
+            var password = 'anahsgvaha';
 
-        user.setemail('carles@gmail.com').consoleme()
-        console.log(user.email);
+            function consoleme() {
+                console.log('Usuari: ' + email)
+            }
+
+            return {
+                consoleme: consoleme,
+                email: email
+            }
+        })()
+
+        albert.consoleme()
+        console.log(albert.email);
         console.log('HEY!')
         // IIFE
         // (function () {
